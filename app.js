@@ -5,7 +5,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const { PORT, MONGO_URI } = require("./config");
-
 const app = express();
 
 // DB Connection
@@ -27,8 +26,14 @@ app.use(
 app.use(express.json());
 app.use(helmet());
 
+// Use Views Templates
+app.set("view engine", "ejs");
+
 // Routes
 app.use("/api", require("./routes"));
+
+// Views Routing
+app.use("/", require("./routes/temp"));
 // @Route [GET] /api
 // @desc Base URL
 const router = require("express").Router();

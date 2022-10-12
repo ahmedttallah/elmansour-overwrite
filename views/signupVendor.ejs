@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <title>المنصور للخدمات - كن شريكاً</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body         { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3 text-right">
+
+    <h1><span class="fa fa-sign-in "></span> تسجيل تاجر جديد</h1>
+
+        <div class="alert alert-danger"><%= msg %></div>
+
+    <!-- LOGIN FORM -->
+    <form action="/api/vendor/signup" method="post">
+        <div class="form-group">
+            <label>الاسم التجاري</label>
+            <input type="text" class="form-control text-right" name="vendor_name">
+        </div>
+        <div class="form-group">
+            <label>اسم المستخدم</label>
+            <input type="text" class="form-control text-right" name="name">
+        </div>
+        <div class="form-group">
+            <label>رقم الموبايل</label>
+            <input type="number" class="form-control text-right" name="phone">
+        </div>
+        <div class="form-group">
+            <label>كلمة المرور</label>
+            <input type="password" class="form-control text-right" name="password">
+        </div>
+        <div class="form-group">
+            <label>إعادة كلمة المرور</label>
+            <input type="password" class="form-control text-right" name="password_repeat">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">اضغط للتسجيل</button>
+    </form>
+
+    <hr>
+
+</div>
+</div>
+</body>
+</html>
