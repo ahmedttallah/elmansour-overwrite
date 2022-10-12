@@ -83,7 +83,10 @@ module.exports = {
         }
       });
     } catch (err) {
+      console.log("🚀 ~ file: vendor.js ~ line 86 ~ singUpVendor: ~ err", err);
+
       return res.status(501).render("signupVendor.ejs", {
+        msg: "حدث خطأ اثناء التسجيل وذلك لأن رقم الموبايل موجود بالفعل",
       });
     }
   }, // Sing Up new Vendor
