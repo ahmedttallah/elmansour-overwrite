@@ -1,3 +1,3 @@
-const {singUpVendor, loginVendor} = require("./vendor");
+const { singUpVendor, loginVendor } = require("./vendor");
 
-module.exports = {singUpVendor};
+module.exports = { singUpVendor, loginVendor };
