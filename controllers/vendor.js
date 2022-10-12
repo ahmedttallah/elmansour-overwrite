@@ -83,9 +83,7 @@ module.exports = {
         }
       });
     } catch (err) {
-      let { message } = err.reponse.data;
       return res.status(501).render("signupVendor.ejs", {
-        msg: `${message}   : `,
       });
     }
   }, // Sing Up new Vendor
