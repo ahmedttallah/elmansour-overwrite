@@ -56,9 +56,7 @@ module.exports = {
             .save()
             .then(() => {
               // Respone a Success Message
-              return res.status(200).render("signupVendor.ejs", {
-                msg: "تم التسجيل بنجاح يرجي التواصل مع المسؤول لتفعيل حسابك",
-              });
+              return res.status(200).render("success.ejs");
             })
             .catch((err) => {
               return res.status(401).render("signupVendor.ejs", {
@@ -71,9 +69,7 @@ module.exports = {
             .updateOne({ email: genMail[0], password, phone: newPhone })
             .then(() => {
               // Respone a Success Message
-              return res.status(200).render("signupVendor.ejs", {
-                msg: "تم التسجيل بنجاح يرجي التواصل مع المسؤول لتفعيل حسابك",
-              });
+              return res.status(200).render("success.ejs");
             })
             .catch((err) => {
               return res.status(401).render("signupVendor.ejs", {
